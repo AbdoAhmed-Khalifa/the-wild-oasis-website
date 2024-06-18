@@ -12,8 +12,10 @@ The Wild Oasis is a sophisticated hotel management website built with Next.js an
 - Detailed hotel amenities and room information
 - Booking system integration
 
-### User Engagement
-- Customer reviews and feedback section
+### Technologies Used
+- Next.js: React framework for server-side rendering and static site generation.
+- Tailwind CSS: Utility-first CSS framework for rapid UI development.
+- Vercel: Deployment platform for modern web applications.
 
 [Live Demo](https://the-wild-oasis-website-rust.vercel.app/)
 
