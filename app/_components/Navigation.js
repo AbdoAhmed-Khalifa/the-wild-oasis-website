@@ -44,10 +44,9 @@ export default async function Navigation({ hide = false }) {
           </Link>
         )}
       </li>
-      {!hide && <AccountLinks />}
+      {!hide && session?.user && <AccountLinks />}
       <li className="mt-auto absolute bottom-0">
-      {!hide && <SignOutButton />}
-      
+        {!hide && session?.user && <SignOutButton />}
       </li>
     </>
   );
