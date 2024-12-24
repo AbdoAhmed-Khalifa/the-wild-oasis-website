@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import image1 from '@/public/about-1.jpg';
+import image2 from '@/public/about-2.jpg';
 import { getCabins } from '../_lib/data-service';
 
 export const revalidate = 86400;
@@ -12,14 +13,14 @@ export default async function Page() {
   const cabins = await getCabins();
   const cabinsLength = cabins.length;
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
+    <div className="grid grid-cols-5 sm:gap-x-24 sm:gap-y-32 gap-y-20 text-lg items-center">
       <div className="md:order-1 order-2 md:col-span-3 col-span-5">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+        <h1 className="md:text-4xl text-2xl mb-10 text-accent-400 font-medium">
           Welcome to The Wild Oasis
         </h1>
 
         <div className="space-y-8">
-          <p>
+          <p className="">
             Where nature&apos;s beauty and comfortable living blend seamlessly.
             Hidden away in the heart of the Italian Dolomites, this is your
             paradise away from home. But it&apos;s not just about the luxury
@@ -40,20 +41,22 @@ export default async function Page() {
         </div>
       </div>
 
-      <div className="md:order-2 order-1 md:col-span-2 col-span-5">
+      <div className="md:order-2 order-1 md:col-span-2 col-span-5 flex justify-center">
         <Image
           src={image1}
           placeholder="blur"
           quality={80}
-          alt="Family sitting around a fire pit in front of cabin"
+          className="w-60 md:w-full"
+          alt="Family sitting around a fire pit in front of cabin "
         />
       </div>
 
-      <div className="md:order-3 order-3 md:col-span-2 col-span-5 aspect-square relative">
+      <div className="md:order-3 order-3 md:col-span-2 col-span-5 flex justify-center">
         <Image
-          src="/about-2.jpg"
-          fill
-          className="object-cover"
+          src={image2}
+          placeholder="blur"
+          quality={80}
+          className="w-60 md:w-full"
           alt="Family that manages The Wild Oasis"
         />
       </div>
